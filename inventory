@@ -2,6 +2,12 @@
 
 test1.homelab.local
 test2.homelab.local
+jenkins.homelab.local
+
+[lxcnodes]
+
+test1.homelab.local
+test2.homelab.local
 
 [webserver]
 
@@ -10,3 +16,7 @@ test1.homelab.local
 [media]
 
 test2.homelab.local
+
+[jenkins]
+
+jenkins.homelab.local

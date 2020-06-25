@@ -6,3 +6,19 @@
     - name: Check if a reboot is needed for Debian and Ubuntu boxes
       register: reboot_required_file
       stat: path=/var/run/reboot-required get_md5=no
+
+- hosts: jenkins
+  become: true
+  
+  vars:
+    jenkins_hostname: jenkins.homelab.local
+    java_packages:
+      - openjdk-8-jdk
+
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins
+
+# - hosts: jenkins
+#   pre_tasks:
+#     - import_tasks: tasks/jenkins.yml
