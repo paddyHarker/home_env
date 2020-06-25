@@ -12,13 +12,11 @@
   
   vars:
     jenkins_hostname: jenkins.homelab.local
+    jenkins_updates_url: "https://updates.jenkins.io"
+    jenkins_package_state: latest
     java_packages:
       - openjdk-8-jdk
 
   roles:
     - role: geerlingguy.java
     - role: geerlingguy.jenkins
-
-# - hosts: jenkins
-#   pre_tasks:
-#     - import_tasks: tasks/jenkins.yml
